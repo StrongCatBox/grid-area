@@ -1,0 +1,115 @@
+#page {
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  grid-template-areas:
+    "head head"
+    "nav  corps"
+    "foot  foot";
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-columns: 150px 1fr;
+}
+
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+#page > header {
+  grid-area: head;
+  background-color: #1100ff;
+}
+
+#page > nav {
+  grid-area: nav;
+  background-color: #fbff00;
+}
+
+#page > main {
+  grid-area: corps;
+  background-color: red;
+}
+
+#page > footer {
+  grid-area: foot;
+  background-color: green;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 960px) {
+  #page {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+      "head head"
+      "nav  corps"
+      "foot  foot";
+    grid-template-rows: 100px 1fr 100px;
+    grid-template-columns: 50% 50%;
+  }
+
+  * {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #page > header {
+    grid-area: head;
+    background-color: #1100ff;
+  }
+
+  #page > nav {
+    grid-area: nav;
+    background-color: #fbff00;
+  }
+
+  #page > main {
+    grid-area: corps;
+    background-color: red;
+  }
+
+  #page > footer {
+    grid-area: foot;
+    background-color: green;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  #page {
+    display: grid;
+    width: 100vw;
+    height: 100vh;
+    grid-template-areas:
+      "head head"
+      "nav  nav"
+      "corps  corps"
+      "foot  foot";
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+
+  * {
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #page > header {
+    grid-area: head;
+    background-color: #1100ff;
+  }
+
+  #page > nav {
+    grid-area: nav;
+    background-color: #fbff00;
+  }
+
+  #page > main {
+    grid-area: corps;
+    background-color: red;
+  }
+
+  #page > footer {
+    grid-area: foot;
+    background-color: green;
+  }
+}
